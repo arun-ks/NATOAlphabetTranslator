@@ -24,7 +24,7 @@
 				"G": "Golf",
 				"H": "Hotel",
 				"I": "India",
-				"J": "Juliet",
+				"J": "Juliett",
 				"K": "Kilo",
 				"L": "Lima",
 				"M": "Mike",
@@ -38,22 +38,41 @@
 				"U": "Uniform",
 				"V": "Victor",
 				"W": "Whiskey",
-				"X": "Xray",
+				"X": "X-ray",
 				"Y": "Yankee",
 				"Z": "Zulu",
-				" ": "<br>"
+				
+				" ": " <br>",
+				"0":"Zero",
+        "1":"One",
+        "2":"Two",
+        "3":"Three",
+        "4":"Four",
+        "5":"Five",
+        "6":"Six",
+        "7":"Seven",
+        "8":"Eight",
+        "9":"Nine",
+        "-":"Dash",
+        ".":"Decimal/Stop"				
 			};
 			var outputText = "";
 			for (var i = 0; i < inputText.length; i++) {
 				var char = inputText.charAt(i);
 				if (natoCodes.hasOwnProperty(char)) {
-					outputText += natoCodes[char] + " ";
+					//outputText += formatFirstLetter(natoCodes[char]) + " ";
+					outputText +=  '<span style="font-weight:bold; color:blue;">' +   natoCodes[char].charAt(0) +  '</span>' + natoCodes[char].slice(1) + " ";
 				} else {
 					outputText += char + " ";
 				}
 			}
 			outputDiv.innerHTML = outputText;
 		}
+		function formatFirstLetter(str) {
+      var firstChar = str.charAt(0);
+      var restOfString = str.slice(1);
+      return '<span style="font-weight:bold; color:red;">' + firstChar + '</span>' + restOfString;
+    }
 	</script>
 </body>
 </html>
