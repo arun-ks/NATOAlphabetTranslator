@@ -60,7 +60,6 @@
 			for (var i = 0; i < inputText.length; i++) {
 				var char = inputText.charAt(i);
 				if (natoCodes.hasOwnProperty(char)) {
-					//outputText += formatFirstLetter(natoCodes[char]) + " ";
 					outputText +=  '<span style="font-weight:bold; color:blue;">' +   natoCodes[char].charAt(0) +  '</span>' + natoCodes[char].slice(1) + " ";
 				} else {
 					outputText += char + " ";
@@ -68,11 +67,7 @@
 			}
 			outputDiv.innerHTML = outputText;
 		}
-		function formatFirstLetter(str) {
-      var firstChar = str.charAt(0);
-      var restOfString = str.slice(1);
-      return '<span style="font-weight:bold; color:red;">' + firstChar + '</span>' + restOfString;
-    }
+
 	</script>
 </body>
 </html>
