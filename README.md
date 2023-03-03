@@ -1,7 +1,7 @@
 # NATO Phonetic Alphabet Translator
 Convert text to [NATO Phonetic Alphabet](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet)
 
-Like version of this page can be [access here](https://arun-ks.github.io/NATOAlphabetTranslator/)
+Like version of this page can be [accessed here](https://arun-ks.github.io/NATOAlphabetTranslator/)
 
 ## How to use
 Type the string in the form & press Convert Button
