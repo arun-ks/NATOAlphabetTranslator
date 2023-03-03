@@ -43,18 +43,20 @@
 				"Z": "Zulu",
 				
 				" ": " <br>",
-				"0":"Zero",
-        "1":"One",
-        "2":"Two",
-        "3":"Three",
-        "4":"Four",
-        "5":"Five",
-        "6":"Six",
-        "7":"Seven",
-        "8":"Eight",
-        "9":"Nine",
+				/*
+				"0":"0(Zero)",
+        "1":"1(One)",
+        "2":"2(Two)",
+        "3":"3(Three)",
+        "4":"4(Four)",
+        "5":"5(Five)",
+        "6":"6(Six)",
+        "7":"7(Seven)",
+        "8":"8(Eight)",
+        "9":"9(Nine)",
         "-":"Dash",
-        ".":"Decimal/Stop"				
+        ". ":"Stop <br>",
+        ".":"Decimal/Stop"		*/
 			};
 			var outputText = "";
 			for (var i = 0; i < inputText.length; i++) {
@@ -62,7 +64,7 @@
 				if (natoCodes.hasOwnProperty(char)) {
 					outputText +=  '<span style="font-weight:bold; color:blue;">' +   natoCodes[char].charAt(0) +  '</span>' + natoCodes[char].slice(1) + " ";
 				} else {
-					outputText += char + " ";
+					outputText += '<span style="font-weight:bold; color:darkblue;">' + char + '</span>'; //+ " ";
 				}
 			}
 			outputDiv.innerHTML = outputText;
